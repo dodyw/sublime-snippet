@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * connect to database
+ */  
+
+include(${1:PATH.'lib/adodb/adodb.inc.php'});
+
+\$${2:app}->db = ADONewConnection('mysql');  
+\$${2:app}->db->debug = false;
+\$${2:app}->db->Connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+$ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
+  
+function &CountExecs($db, $sql, $inputarray) {
+  global $EXECS;
+
+  if (!is_array(inputarray)) $EXECS++;
+  elseif (is_array(reset($inputarray))) $EXECS += sizeof($inputarray);
+  else $EXECS++;
+
+  return $null;
+}  
+
+\$${2:app}->db->fnExecute = 'CountExecs';
+]]></content>
+<tabTrigger>qinit</tabTrigger>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <!-- <tabTrigger>hello</tabTrigger> -->
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

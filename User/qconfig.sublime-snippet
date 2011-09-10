@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+define('DB_USER', '${1:root}');
+define('DB_PWD' , '${2}');
+define('DB_NAME', '${3:db}');
+define('DB_HOST', 'localhost');
+]]></content>
+<tabTrigger>qconfig</tabTrigger>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <!-- <tabTrigger>hello</tabTrigger> -->
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

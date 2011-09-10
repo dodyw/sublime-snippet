@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+\$.ajax({
+  url: '${1:http://www.}',
+  type: "${2:GET}",
+  async: ${3:true},
+  dataType: '${4:script}',
+  success: function(data) {
+    ${5:// code}
+  }  
+});
+]]></content>
+<tabTrigger>jqajax</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

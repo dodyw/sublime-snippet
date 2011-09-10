@@ -1,0 +1,12 @@
+++++++++++++++++++++++++++++++++++++++++++++++++
+SublimeText2 snippet collection
+
+Date  : September 11, 2011
+By    : Dody Rachmat W. (dodyrw@gmail.com)
+github: http://github.com/dodyrw/sublime-snippet
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+Put the snippet files in sublimetext2 package folder
+
+OSX: {USER_FOLDER}/Library/Application Support/Sublime Text 2/Packages
+Windows: {SublimeText2}\Data\Packages

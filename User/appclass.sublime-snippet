@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[
+class ${1:app} {
+  var \$db;
+  var \$config;
+  var \$input;
+  
+  public function __construct(){
+    foreach (\$_REQUEST as \$k => \$v) {
+      if (!defined('ADMIN_PAGE')) {
+        \$this->input[\$k] = \$this->clean_xss(\$v);
+      }
+      else {
+        \$this->input[\$k] = \$v;
+      }
+    }
+  }
+  
+  function clean_xss(\$s) {
+    \$s = str_replace(array('&','<','>','(',')','#'),
+                     array('&#38','&lt;','&gt;','&#40','&#41','&#35'),
+                     \$s);
+  
+    return \$s;
+  }
+}
+]]></content>
+<tabTrigger>appclass</tabTrigger>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <!-- <tabTrigger>hello</tabTrigger> -->
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+\$query = "${1:sql}";
+\$rs = \$${2:app}->db->Execute(\$query);
+\$${3:var} = \$rs->GetRows();
+]]></content>
+<tabTrigger>qgetrows</tabTrigger>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <!-- <tabTrigger>hello</tabTrigger> -->
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>
