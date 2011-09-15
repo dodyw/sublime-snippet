@@ -9,16 +9,16 @@ include(${1:PATH.'lib/adodb/adodb.inc.php'});
 \$${2:app}->db = ADONewConnection('mysql');  
 \$${2:app}->db->debug = false;
 \$${2:app}->db->Connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
-$ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
+\$ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
   
-function &CountExecs($db, $sql, $inputarray) {
-  global $EXECS;
+function &CountExecs(\$db, \$sql, \$inputarray) {
+  global \$EXECS;
 
-  if (!is_array(inputarray)) $EXECS++;
-  elseif (is_array(reset($inputarray))) $EXECS += sizeof($inputarray);
-  else $EXECS++;
+  if (!is_array(\$inputarray)) \$EXECS++;
+  elseif (is_array(reset(\$inputarray))) \$EXECS += sizeof(\$inputarray);
+  else \$EXECS++;
 
-  return $null;
+  return \$null;
 }  
 
 \$${2:app}->db->fnExecute = 'CountExecs';
